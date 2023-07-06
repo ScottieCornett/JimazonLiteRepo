@@ -1,0 +1,12 @@
+C:\Users\Scottie\source\repos\JimazonLite\JimazonLite.Utility\bin\Debug\net7.0\JimazonLite.Utility.deps.json
+C:\Users\Scottie\source\repos\JimazonLite\JimazonLite.Utility\bin\Debug\net7.0\JimazonLite.Utility.dll
+C:\Users\Scottie\source\repos\JimazonLite\JimazonLite.Utility\bin\Debug\net7.0\JimazonLite.Utility.pdb
+C:\Users\Scottie\source\repos\JimazonLite\JimazonLite.Utility\obj\Debug\net7.0\JimazonLite.Utility.csproj.AssemblyReference.cache
+C:\Users\Scottie\source\repos\JimazonLite\JimazonLite.Utility\obj\Debug\net7.0\JimazonLite.Utility.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Scottie\source\repos\JimazonLite\JimazonLite.Utility\obj\Debug\net7.0\JimazonLite.Utility.AssemblyInfoInputs.cache
+C:\Users\Scottie\source\repos\JimazonLite\JimazonLite.Utility\obj\Debug\net7.0\JimazonLite.Utility.AssemblyInfo.cs
+C:\Users\Scottie\source\repos\JimazonLite\JimazonLite.Utility\obj\Debug\net7.0\JimazonLite.Utility.csproj.CoreCompileInputs.cache
+C:\Users\Scottie\source\repos\JimazonLite\JimazonLite.Utility\obj\Debug\net7.0\JimazonLite.Utility.dll
+C:\Users\Scottie\source\repos\JimazonLite\JimazonLite.Utility\obj\Debug\net7.0\refint\JimazonLite.Utility.dll
+C:\Users\Scottie\source\repos\JimazonLite\JimazonLite.Utility\obj\Debug\net7.0\JimazonLite.Utility.pdb
+C:\Users\Scottie\source\repos\JimazonLite\JimazonLite.Utility\obj\Debug\net7.0\ref\JimazonLite.Utility.dll

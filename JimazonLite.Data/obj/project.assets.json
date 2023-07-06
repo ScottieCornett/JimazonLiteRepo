@@ -563,6 +563,26 @@
         "build": {
           "buildTransitive/net6.0/System.Text.Json.targets": {}
         }
+      },
+      "JimazonLite.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/JimazonLite.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/JimazonLite.Models.dll": {}
+        }
+      },
+      "JimazonLite.Utility/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/JimazonLite.Utility.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/JimazonLite.Utility.dll": {}
+        }
       }
     }
   },
@@ -1293,10 +1313,22 @@
         "system.text.json.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "JimazonLite.Models/1.0.0": {
+      "type": "project",
+      "path": "../JimazonLite.Models/JimazonLite.Models.csproj",
+      "msbuildProject": "../JimazonLite.Models/JimazonLite.Models.csproj"
+    },
+    "JimazonLite.Utility/1.0.0": {
+      "type": "project",
+      "path": "../JimazonLite.Utility/JimazonLite.Utility.csproj",
+      "msbuildProject": "../JimazonLite.Utility/JimazonLite.Utility.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "JimazonLite.Models >= 1.0.0",
+      "JimazonLite.Utility >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 7.0.8",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.8",
       "Microsoft.EntityFrameworkCore.Sqlite >= 7.0.8",
@@ -1329,7 +1361,14 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Scottie\\source\\repos\\JimazonLite\\JimazonLite.Models\\JimazonLite.Models.csproj": {
+              "projectPath": "C:\\Users\\Scottie\\source\\repos\\JimazonLite\\JimazonLite.Models\\JimazonLite.Models.csproj"
+            },
+            "C:\\Users\\Scottie\\source\\repos\\JimazonLite\\JimazonLite.Utility\\JimazonLite.Utility.csproj": {
+              "projectPath": "C:\\Users\\Scottie\\source\\repos\\JimazonLite\\JimazonLite.Utility\\JimazonLite.Utility.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

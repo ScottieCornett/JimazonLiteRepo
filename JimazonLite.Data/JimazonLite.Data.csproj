@@ -19,4 +19,9 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\JimazonLite.Models\JimazonLite.Models.csproj" />
+    <ProjectReference Include="..\JimazonLite.Utility\JimazonLite.Utility.csproj" />
+  </ItemGroup>
+
 </Project>
