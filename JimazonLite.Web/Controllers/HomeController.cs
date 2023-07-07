@@ -1,4 +1,4 @@
-﻿using JimazonLite.Web.Models;
+﻿using JimazonLite.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 

@@ -1,4 +1,4 @@
-namespace JimazonLite.Web.Models
+namespace JimazonLite.Models
 {
     public class ErrorViewModel
     {
