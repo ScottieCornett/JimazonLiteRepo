@@ -11,10 +11,11 @@ namespace JimazonLite.Web.Controllers
         {
             _dbContext = dbContext;
         }
+        [HttpGet]
         public IActionResult Index()
         {
-            List<Product> Products = _dbContext.Products.ToList();
-            return View();
+            List<Product> products = _dbContext.Products.ToList();
+            return View(products);
         }
     }
 }
