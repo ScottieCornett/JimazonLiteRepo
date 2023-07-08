@@ -1,4 +1,5 @@
 ﻿using JimazonLite.Data;
+using JimazonLite.Data.Repository.IRepository;
 using JimazonLite.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -6,15 +7,15 @@ namespace JimazonLite.Web.Controllers
 {
     public class ProductController : Controller
     {
-        private readonly ApplicationDbContext _dbContext;
-        public ProductController(ApplicationDbContext dbContext)
+        private readonly IProductRepository _productRepository;
+        public ProductController(IProductRepository productRepository)
         {
-            _dbContext = dbContext;
+            _productRepository = productRepository;
         }
         [HttpGet]
         public IActionResult Index()
         {
-            List<Product> products = _dbContext.Products.ToList();
+            List<Product> products = _productRepository.GetAll().ToList();
             return View(products);
         }
         [HttpGet]
@@ -37,8 +38,8 @@ namespace JimazonLite.Web.Controllers
 
             if (ModelState.IsValid)
             {
-                _dbContext.Products.Add(product);
-                _dbContext.SaveChanges();
+                _productRepository.Add(product);
+                _productRepository.Save();
                 TempData["success"] = "Product successfully created";
                 return RedirectToAction("Index");
             }
@@ -53,7 +54,7 @@ namespace JimazonLite.Web.Controllers
                 return NotFound();
             }
 
-            Product? product = _dbContext.Products.FirstOrDefault(u => u.Id == id);
+            Product? product = _productRepository.Get(u => u.Id == id);
 
             if (product == null)
             {
@@ -72,8 +73,8 @@ namespace JimazonLite.Web.Controllers
 
             if (ModelState.IsValid)
             {
-                _dbContext.Products.Update(product);
-                _dbContext.SaveChanges();
+                _productRepository.Update(product);
+                _productRepository.Save();
                 TempData["success"] = "Product successfully updated";
                 return RedirectToAction("Index");
             }
@@ -88,7 +89,7 @@ namespace JimazonLite.Web.Controllers
                 return NotFound();
             }
 
-            Product? product = _dbContext.Products.FirstOrDefault(u => u.Id == id);
+            Product? product = _productRepository.Get(u => u.Id == id);
 
             if (product == null)
             {
@@ -99,16 +100,16 @@ namespace JimazonLite.Web.Controllers
         [HttpPost, ActionName("Delete")]
         public IActionResult DeleteProduct(int? id)
         {
-      
-            Product product = _dbContext.Products.FirstOrDefault(u => u.Id == id);
+
+            Product product = _productRepository.Get(u => u.Id == id);
 
             if (product == null)
             {
                 return NotFound();
             }
             
-             _dbContext.Products.Remove(product);
-             _dbContext.SaveChanges();
+             _productRepository.Remove(product);
+             _productRepository.Save();
             TempData["success"] = "Product successfully deleted";
             return RedirectToAction("Index");
 
