@@ -35,9 +35,50 @@ namespace JimazonLite.Web.Controllers
                 ModelState.AddModelError("Name", "The product name must be at least 3 characters long");
             }
 
-            _dbContext.Products.Add(product);
-            _dbContext.SaveChanges();
-            return RedirectToAction("Index");
+            if (ModelState.IsValid)
+            {
+                _dbContext.Products.Add(product);
+                _dbContext.SaveChanges();
+                TempData["success"] = "Product successfully created";
+                return RedirectToAction("Index");
+            }
+
+            return View(product);
+        }
+        [HttpGet] 
+        public IActionResult Update(int? id)
+        {
+            if (id == null || id == 0)
+            {
+                return NotFound();
+            }
+
+            Product? product = _dbContext.Products.FirstOrDefault(u => u.Id == id);
+
+            if (product == null)
+            {
+                return NotFound();
+            }
+
+            return View(product);
+        }
+        [HttpPost] 
+        public IActionResult Update(Product product)
+        {
+            if (product == null)
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                _dbContext.Products.Update(product);
+                _dbContext.SaveChanges();
+                TempData["success"] = "Product successfully updated";
+                return RedirectToAction("Index");
+            }
+            return View(product);
+
         }
     }
 }

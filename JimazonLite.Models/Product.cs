@@ -16,8 +16,10 @@ namespace JimazonLite.Models
         [Required]
         public string Description { get; set; }
         [Required]
+        [Range(1, 10000, ErrorMessage = "The price must be between $1 and $10,000")]
         public float Price { get; set; }
         [Required]
+        [Range(1, 1000, ErrorMessage = "The quantity must be between 1 and 1000")]
         public int Quantity { get; set; }
         public string? ModelNumber { get; set; }
         public string? ImageUrl { get; set; }
