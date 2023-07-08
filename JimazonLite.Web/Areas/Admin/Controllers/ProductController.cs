@@ -3,8 +3,9 @@ using JimazonLite.Data.Repository.IRepository;
 using JimazonLite.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace JimazonLite.Web.Controllers
+namespace JimazonLite.Web.Areas.Admin.Controllers
 {
+    [Area("Admin")]
     public class ProductController : Controller
     {
         private readonly IProductRepository _productRepository;
@@ -46,7 +47,7 @@ namespace JimazonLite.Web.Controllers
 
             return View(product);
         }
-        [HttpGet] 
+        [HttpGet]
         public IActionResult Update(int? id)
         {
             if (id == null || id == 0)
@@ -63,7 +64,7 @@ namespace JimazonLite.Web.Controllers
 
             return View(product);
         }
-        [HttpPost] 
+        [HttpPost]
         public IActionResult Update(Product product)
         {
             if (product == null)
@@ -107,13 +108,13 @@ namespace JimazonLite.Web.Controllers
             {
                 return NotFound();
             }
-            
-             _productRepository.Remove(product);
-             _productRepository.Save();
+
+            _productRepository.Remove(product);
+            _productRepository.Save();
             TempData["success"] = "Product successfully deleted";
             return RedirectToAction("Index");
 
-            
+
         }
     }
 }
