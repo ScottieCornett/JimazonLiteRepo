@@ -80,5 +80,39 @@ namespace JimazonLite.Web.Controllers
             return View(product);
 
         }
+        [HttpGet]
+        public IActionResult Delete(int? id)
+        {
+            if (id == null || id == 0)
+            {
+                return NotFound();
+            }
+
+            Product? product = _dbContext.Products.FirstOrDefault(u => u.Id == id);
+
+            if (product == null)
+            {
+                return NotFound();
+            }
+            return View(product);
+        }
+        [HttpPost, ActionName("Delete")]
+        public IActionResult DeleteProduct(int? id)
+        {
+      
+            Product product = _dbContext.Products.FirstOrDefault(u => u.Id == id);
+
+            if (product == null)
+            {
+                return NotFound();
+            }
+            
+             _dbContext.Products.Remove(product);
+             _dbContext.SaveChanges();
+            TempData["success"] = "Product successfully deleted";
+            return RedirectToAction("Index");
+
+            
+        }
     }
 }
