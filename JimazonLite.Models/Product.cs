@@ -20,7 +20,7 @@ namespace JimazonLite.Models
         [Required]
         public int Quantity { get; set; }
         public string? ModelNumber { get; set; }
-        public string ImageUrl { get; set; }
+        public string? ImageUrl { get; set; }
         public DateTime DateAdded { get; set; }
 
     }

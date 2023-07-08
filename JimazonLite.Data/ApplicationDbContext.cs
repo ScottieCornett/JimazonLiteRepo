@@ -13,7 +13,7 @@ namespace JimazonLite.Data
         public DbSet<Product> Products { get; set; }
         public string DbPath { get; }
 
-        public ApplicationDbContext()
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> db) : base(db)
         {
             var folder = Environment.SpecialFolder.LocalApplicationData;
             var path = Environment.GetFolderPath(folder);

@@ -17,5 +17,27 @@ namespace JimazonLite.Web.Controllers
             List<Product> products = _dbContext.Products.ToList();
             return View(products);
         }
+        [HttpGet]
+        public IActionResult Create()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Create(Product product)
+        {
+            if (product == null)
+            {
+                return NotFound();
+            }
+
+            if (product.Name.Length < 3)
+            {
+                ModelState.AddModelError("Name", "The product name must be at least 3 characters long");
+            }
+
+            _dbContext.Products.Add(product);
+            _dbContext.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }
