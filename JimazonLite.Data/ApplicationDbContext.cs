@@ -33,6 +33,15 @@ namespace JimazonLite.Data
                 new Product { Id = 3, Name = "Camping Cot", Description = "Folding Camping Cot", ModelNumber = "", Price = 50.00f, ImageUrl = "", DateAdded = DateTime.Today, Quantity = 1 },
                 new Product { Id = 4, Name = "Bicycle", Description = "Koda Retrospec Bicycle", ModelNumber = "", Price = 40.00f, ImageUrl = "", DateAdded = DateTime.Today, Quantity = 1 },
                 new Product { Id = 5, Name = "Hedge Trimmer", Description = "GreenWorks 24V Hedge Trimmer", ModelNumber = "", Price = 35.00f, ImageUrl = "", DateAdded = DateTime.Today, Quantity = 1 });
+
+            modelBuilder.Entity<Category>().HasData(
+                new Category { Id = 1, Name = "Electronics"},
+                new Category { Id = 2, Name = "Appliances"},
+                new Category { Id = 3, Name = "Sporting Goods and Outdoors"},
+                new Category { Id = 4, Name = "Lawn and Garden"},
+                new Category { Id = 5, Name = "Musical Instruments"},
+                new Category { Id = 6, Name = "Furniture"}
+                );
         }
     }
 }
