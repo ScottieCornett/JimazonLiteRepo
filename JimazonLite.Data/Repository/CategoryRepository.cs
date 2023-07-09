@@ -16,11 +16,6 @@ namespace JimazonLite.Data.Repository
         {
             _dbContext = dbContext;
         }
-        public void Save()
-        {
-            _dbContext.SaveChanges();
-        }
-
         public void Update(Category category)
         {
             _dbContext.Update(category);

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -22,11 +23,13 @@ namespace JimazonLite.Models
         [Required]
         [Range(1, 1000, ErrorMessage = "The quantity must be between 1 and 1000")]
         public int Quantity { get; set; }
-        public string? ModelNumber { get; set; }
-        public string? ImageUrl { get; set; }
+        public string ModelNumber { get; set; }
+        [ValidateNever]
+        public string ImageUrl { get; set; }
         public DateTime DateAdded { get; set; }
         public int? CategoryId { get; set; }
         [ForeignKey("CategoryId")]
+        [ValidateNever]
         public Category? Category { get; set; }
 
     }

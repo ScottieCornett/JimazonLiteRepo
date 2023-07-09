@@ -1,5 +1,4 @@
-﻿using JimazonLite.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace JimazonLite.Data.Repository.IRepository
 {
-    public interface IProductRepository : IRepository<Product>
+    public interface IUnitOfWork
     {
-        void Update(Product product);
-
-        
+        ICategoryRepository Category { get; }
+        IProductRepository Product { get; }
+        void Save();
     }
 }

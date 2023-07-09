@@ -8,15 +8,15 @@ namespace JimazonLite.Web.Areas.Admin.Controllers
     [Area("Admin")]
     public class CategoryController : Controller
     {
-        private readonly ICategoryRepository _categoryRepository;
-        public CategoryController(ICategoryRepository categoryRepository)
+        private readonly IUnitOfWork _unitOfWork;
+        public CategoryController(IUnitOfWork unitOfWork)
         {
-            _categoryRepository = categoryRepository;
+            _unitOfWork = unitOfWork;
         }
         [HttpGet]
         public IActionResult Index()
         {
-            List<Category> categories = _categoryRepository.GetAll().ToList();
+            List<Category> categories = _unitOfWork.Category.GetAll().ToList();
             return View(categories);
         }
         [HttpGet]
@@ -39,12 +39,12 @@ namespace JimazonLite.Web.Areas.Admin.Controllers
 
             if (ModelState.IsValid)
             {
-                _categoryRepository.Add(category);
-                _categoryRepository.Save();
+                _unitOfWork.Category.Add(category);
+                _unitOfWork.Save();
                 TempData["success"] = "Category created successfully";
                 return RedirectToAction("Index");
             }
-            return View(category);
+            return View();
            
         }
         [HttpGet]
@@ -55,7 +55,7 @@ namespace JimazonLite.Web.Areas.Admin.Controllers
                 return NotFound();
             }
 
-            Category category = _categoryRepository.Get(u => u.Id == id);
+            Category category = _unitOfWork.Category.Get(u => u.Id == id);
 
             if (category == null)
             {
@@ -73,12 +73,12 @@ namespace JimazonLite.Web.Areas.Admin.Controllers
 
             if (ModelState.IsValid)
             {
-                _categoryRepository.Update(category);
-                _categoryRepository.Save();
+                _unitOfWork.Category.Update(category);
+                _unitOfWork.Save();
                 TempData["success"] = "Category updated successfully";
                 return RedirectToAction("Index");
             }
-            return View(category);
+            return View();
         }
         [HttpGet]
         public IActionResult Delete(int? id)
@@ -88,7 +88,7 @@ namespace JimazonLite.Web.Areas.Admin.Controllers
                 return NotFound();
             }
 
-            Category category = _categoryRepository.Get(u => u.Id == id);
+            Category category = _unitOfWork.Category.Get(u => u.Id == id);
             if (category == null)
             {
                 return NotFound();
@@ -98,10 +98,10 @@ namespace JimazonLite.Web.Areas.Admin.Controllers
         [HttpPost, ActionName("Delete")]
         public IActionResult DeleteCategory(int? id)
         {
-            Category category = _categoryRepository.Get(u => u.Id == id);
+            Category category = _unitOfWork.Category.Get(u => u.Id == id);
 
-            _categoryRepository.Remove(category);
-            _categoryRepository.Save();
+            _unitOfWork.Category.Remove(category);
+            _unitOfWork.Save();
             TempData["success"] = "Category deleted successfully";
             return RedirectToAction("Index");
         }

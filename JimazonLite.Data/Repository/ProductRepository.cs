@@ -16,14 +16,24 @@ namespace JimazonLite.Data.Repository
         {
             _dbContext = dbContext;
         }
-        public void Save()
-        {
-            _dbContext.SaveChanges();
-        }
-
+    
         public void Update(Product product)
         {
-            _dbContext.Update(product);
+            var productFromDb = _dbContext.Products.FirstOrDefault(u => u.Id == product.Id);
+            if(productFromDb != null)
+            {
+                productFromDb.Name = product.Name;
+                productFromDb.Description = product.Description;
+                productFromDb.Price = product.Price;
+                productFromDb.ModelNumber = product.ModelNumber;
+                productFromDb.Quantity = product.Quantity;
+                productFromDb.DateAdded = product.DateAdded;
+                productFromDb.CategoryId = product.CategoryId;
+                if (product.ImageUrl != null)
+                {
+                    productFromDb.ImageUrl = product.ImageUrl;
+                }
+            }
         }
     }
 }
