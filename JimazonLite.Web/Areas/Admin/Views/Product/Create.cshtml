@@ -9,17 +9,23 @@
         </div>
     </div>
     <div class="card-body p-4">
-        <form method="post" class="row">
+        <form method="post" class="row" enctype="multipart/form-data">
             <div class="border p-3">
                 <div class="form-floating py-2 col-12">
                     <input asp-for="Name" class="form-control border-0 shadow" />
-                    <label asp-for="Name" class="ms-2">Item Name</label>
+                    <label asp-for="Name" class="ms-2">Product Name</label>
                     <span asp-validation-for="Name" class="text-danger"></span>
                 </div>
+                <div class="py-2 col-12">
+                    <label asp-for="Description" class="ms-2 text-muted">Description</label>
+                    <textarea asp-for="Description" class="form-control border-0 shadow"></textarea>
+                </div>
                 <div class="form-floating py-2 col-12">
-                    <input asp-for="Description" class="form-control border-0 shadow" />
-                    <label asp-for="Description" class="ms-2">Item Description</label>
-                    <span asp-validation-for="Description" class="text-danger"></span>
+                    <select asp-for="CategoryId" asp-items="ViewBag.CategoryList" class="form-select border-0 shadow">
+                        <option disabled selected>--Select Category--</option>
+                    </select>
+                    <label asp-for="CategoryId" class="ms-2">Category</label>
+                    <span asp-validation-for="CategoryId" class="text-danger"></span>
                 </div>
                 <div class="form-floating py-2 col-12">
                     <input asp-for="Price" class="form-control border-0 shadow" />
@@ -28,13 +34,17 @@
                 </div>
                 <div class="form-floating py-2 col-12">
                     <input asp-for="Quantity" class="form-control border-0 shadow" />
-                    <label asp-for="Quantity" class="ms-2">Item Quantity</label>
+                    <label asp-for="Quantity" class="ms-2">Quantity For Sale</label>
                     <span asp-validation-for="Quantity" class="text-danger"></span>
                 </div>
                 <div class="form-floating py-2 col-12">
                     <input asp-for="ModelNumber" class="form-control border-0 shadow" />
                     <label asp-for="ModelNumber" class="ms-2">Model Number</label>
                     <span asp-validation-for="ModelNumber" class="text-danger"></span>
+                </div>
+                <div class="form-floating py-2 col-12">
+                    <input type="file" class="form-control border-0 shadow" />
+                    <label asp-for="ImageUrl" class="ms-2">Image</label>
                 </div>
                 <div class="form-floating py-2 col-12">
                     <input asp-for="DateAdded" class="form-control border-0 shadow" />
@@ -60,6 +70,13 @@
 
 
 @section Scripts{
+    <script>
+        tinymce.init({
+            selector: 'textarea',
+            plugins: 'anchor autolink charmap codesample emoticons lists visualblocks wordcount',
+            toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | align lineheight | numlist bullist indent outdent | removeformat',
+        });
+    </script>
     @{
         <partial name="_ValidationScriptsPartial" />
     }

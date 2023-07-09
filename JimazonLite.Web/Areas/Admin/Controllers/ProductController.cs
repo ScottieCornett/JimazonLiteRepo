@@ -2,6 +2,8 @@
 using JimazonLite.Data.Repository.IRepository;
 using JimazonLite.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using System.Collections.Generic;
 
 namespace JimazonLite.Web.Areas.Admin.Controllers
 {
@@ -9,19 +11,30 @@ namespace JimazonLite.Web.Areas.Admin.Controllers
     public class ProductController : Controller
     {
         private readonly IProductRepository _productRepository;
-        public ProductController(IProductRepository productRepository)
+        private readonly ICategoryRepository _categoryRepository;
+        public ProductController(IProductRepository productRepository, ICategoryRepository categoryRepository)
         {
             _productRepository = productRepository;
+            _categoryRepository = categoryRepository;
         }
         [HttpGet]
         public IActionResult Index()
         {
             List<Product> products = _productRepository.GetAll().ToList();
+           
             return View(products);
         }
         [HttpGet]
         public IActionResult Create()
         {
+            IEnumerable<SelectListItem> categoryList = _categoryRepository
+               .GetAll().Select(u => new SelectListItem
+               {
+                   Text = u.Name,
+                   Value = u.Id.ToString()
+               });
+
+            ViewBag.CategoryList = categoryList;
             return View();
         }
         [HttpPost]
