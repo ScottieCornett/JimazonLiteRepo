@@ -12,10 +12,12 @@ namespace JimazonLite.Web.Areas.Admin.Controllers
     {
         private readonly IProductRepository _productRepository;
         private readonly ICategoryRepository _categoryRepository;
-        public ProductController(IProductRepository productRepository, ICategoryRepository categoryRepository)
+        private readonly IWebHostEnvironment _webHostEnvironment;
+        public ProductController(IProductRepository productRepository, ICategoryRepository categoryRepository, IWebHostEnvironment webHostEnvironment)
         {
             _productRepository = productRepository;
             _categoryRepository = categoryRepository;
+            _webHostEnvironment = webHostEnvironment;
         }
         [HttpGet]
         public IActionResult Index()
@@ -38,7 +40,7 @@ namespace JimazonLite.Web.Areas.Admin.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult Create(Product product)
+        public IActionResult Create(Product product, IFormFile file)
         {
             if (product == null)
             {
@@ -52,6 +54,20 @@ namespace JimazonLite.Web.Areas.Admin.Controllers
 
             if (ModelState.IsValid)
             {
+                string rootPath = _webHostEnvironment.WebRootPath;
+                if (file != null)
+                {
+                    string fileName = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);
+                    string productPath = Path.Combine(rootPath, @"images\product");
+
+                    using (var fileStream = new FileStream(Path.Combine(productPath, fileName), FileMode.Create))
+                    {
+                        file.CopyTo(fileStream);
+                    }
+
+                    product.ImageUrl = @"\images\product\" + fileName;
+                }
+
                 _productRepository.Add(product);
                 _productRepository.Save();
                 TempData["success"] = "Product successfully created";

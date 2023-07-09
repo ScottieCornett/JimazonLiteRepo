@@ -13,6 +13,14 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\Scottie\\source\\repos\\JimazonLite\\JimazonLite.Web\\wwwroot\\images\\product\\78b36b75-5f5c-4a5f-969b-062308cb47ce.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\78b36b75-5f5c-4a5f-969b-062308cb47ce.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Scottie\\source\\repos\\JimazonLite\\JimazonLite.Web\\wwwroot\\images\\product\\f7ee337a-35a0-4358-bb1c-54419dffcba0.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\f7ee337a-35a0-4358-bb1c-54419dffcba0.jpg"
+    },
+    {
       "Id": "C:\\Users\\Scottie\\source\\repos\\JimazonLite\\JimazonLite.Web\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "mB9WYlJwcr+dOwzXH7G56fGfSLg27THNKIUFdq5qGYo=",
+  "Hash": "Q+Ixgo3ngVccxTbNlUlBloCufD20Irog4q1YuSswcYQ=",
   "Source": "JimazonLite.Web",
   "BasePath": "_content/JimazonLite.Web",
   "Mode": "Default",
@@ -83,6 +83,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\Scottie\\source\\repos\\JimazonLite\\JimazonLite.Web\\wwwroot\\images\\product\\78b36b75-5f5c-4a5f-969b-062308cb47ce.jpg",
+      "SourceId": "JimazonLite.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Scottie\\source\\repos\\JimazonLite\\JimazonLite.Web\\wwwroot\\",
+      "BasePath": "_content/JimazonLite.Web",
+      "RelativePath": "images/product/78b36b75-5f5c-4a5f-969b-062308cb47ce.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\product\\78b36b75-5f5c-4a5f-969b-062308cb47ce.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Scottie\\source\\repos\\JimazonLite\\JimazonLite.Web\\wwwroot\\images\\product\\f7ee337a-35a0-4358-bb1c-54419dffcba0.jpg",
+      "SourceId": "JimazonLite.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Scottie\\source\\repos\\JimazonLite\\JimazonLite.Web\\wwwroot\\",
+      "BasePath": "_content/JimazonLite.Web",
+      "RelativePath": "images/product/f7ee337a-35a0-4358-bb1c-54419dffcba0.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\product\\f7ee337a-35a0-4358-bb1c-54419dffcba0.jpg"
     },
     {
       "Identity": "C:\\Users\\Scottie\\source\\repos\\JimazonLite\\JimazonLite.Web\\wwwroot\\js\\site.js",
