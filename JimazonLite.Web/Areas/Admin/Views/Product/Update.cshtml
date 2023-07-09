@@ -9,50 +9,65 @@
         </div>
     </div>
     <div class="card-body p-4">
-        <form method="post" class="row">
-            <div class="border p-3">
-                <div class="form-floating py-2 col-12">
-                    <input asp-for="Name" class="form-control border-0 shadow" />
-                    <label asp-for="Name" class="ms-2">Item Name</label>
-                    <span asp-validation-for="Name" class="text-danger"></span>
-                </div>
-                <div class="form-floating py-2 col-12">
-                    <input asp-for="Description" class="form-control border-0 shadow" />
-                    <label asp-for="Description" class="ms-2">Item Description</label>
-                    <span asp-validation-for="Description" class="text-danger"></span>
-                </div>
-                <div class="form-floating py-2 col-12">
-                    <input asp-for="Price" class="form-control border-0 shadow" />
-                    <label asp-for="Price" class="ms-2">Price</label>
-                    <span asp-validation-for="Price" class="text-danger"></span>
-                </div>
-                <div class="form-floating py-2 col-12">
-                    <input asp-for="Quantity" class="form-control border-0 shadow" />
-                    <label asp-for="Quantity" class="ms-2">Item Quantity</label>
-                    <span asp-validation-for="Quantity" class="text-danger"></span>
-                </div>
-                <div class="form-floating py-2 col-12">
-                    <input asp-for="ModelNumber" class="form-control border-0 shadow" />
-                    <label asp-for="ModelNumber" class="ms-2">Model Number</label>
-                    <span asp-validation-for="ModelNumber" class="text-danger"></span>
-                </div>
-                <div class="form-floating py-2 col-12">
-                    <input asp-for="DateAdded" class="form-control border-0 shadow" />
-                    <label asp-for="DateAdded" class="ms-2">Date Added</label>
-                    <span asp-validation-for="DateAdded" class="text-danger"></span>
-                </div>
-                <div class="row">
-                    <div class="col-6 col-md-3">
-                        <button type="submit" class="btn btn-info form-control">Update</button>
-                    </div>
-                    <div class="col-6 col-md-3">
-                        <a asp-controller="Product" asp-action="Index" class="btn btn-light form-control">
-                            Back to List
-                        </a>
-                    </div>
-                </div>
+        <form method="post" class="row" enctype="multipart/form-data">
+            <input asp-for="Id" hidden/>
+            <input asp-for="ImageUrl" hidden />
+            <div class="row">
+                <div class="col-10">
+                    <div class="border p-3">
+                        <div class="form-floating py-2 col-12">
+                            <input asp-for="Name" class="form-control border-0 shadow" />
+                            <label asp-for="Name" class="ms-2">Item Name</label>
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                        </div>
+                        <div class="form-floating py-2 col-12">
+                            <input asp-for="Description" class="form-control border-0 shadow" />
+                            <label asp-for="Description" class="ms-2">Item Description</label>
+                            <span asp-validation-for="Description" class="text-danger"></span>
+                        </div>
+                        <div class="form-floating py-2 col-12">
+                            <input asp-for="Price" class="form-control border-0 shadow" />
+                            <label asp-for="Price" class="ms-2">Price</label>
+                            <span asp-validation-for="Price" class="text-danger"></span>
+                        </div>
+                        <div class="form-floating py-2 col-12">
+                            <input asp-for="Quantity" class="form-control border-0 shadow" />
+                            <label asp-for="Quantity" class="ms-2">Item Quantity</label>
+                            <span asp-validation-for="Quantity" class="text-danger"></span>
+                        </div>
+                        <div class="form-floating py-2 col-12">
+                            <input asp-for="ModelNumber" class="form-control border-0 shadow" />
+                            <label asp-for="ModelNumber" class="ms-2">Model Number</label>
+                            <span asp-validation-for="ModelNumber" class="text-danger"></span>
+                        </div>
+                        <div class="form-floating py-2 col-12">
+                            <input type="file" name="file" class="form-control border-0 shadow" />
+                            <label asp-for="ImageUrl" class="ms-2">Image</label>
+                        </div>
+                        <div class="form-floating py-2 col-12">
+                            <input asp-for="DateAdded" class="form-control border-0 shadow" />
+                            <label asp-for="DateAdded" class="ms-2">Date Added</label>
+                            <span asp-validation-for="DateAdded" class="text-danger"></span>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 col-md-3">
+                                <button type="submit" class="btn btn-info form-control">Update</button>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <a asp-controller="Product" asp-action="Index" class="btn btn-light form-control">
+                                    Back to List
+                                </a>
+                            </div>
+                        </div>
 
+                    </div>
+                </div>
+                <div class="col-2">
+                    <img src="@Model.ImageUrl"
+                    style="border-radius:5px; width:175px;height:175px; border:1px solid #bbb9b9"/>
+                </div>
             </div>
+            
         </form>
     </div>
 </div>

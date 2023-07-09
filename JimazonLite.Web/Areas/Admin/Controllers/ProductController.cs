@@ -40,7 +40,7 @@ namespace JimazonLite.Web.Areas.Admin.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult Create(Product product, IFormFile file)
+        public IActionResult Create(Product product, IFormFile? file)
         {
             if (product == null)
             {
@@ -94,7 +94,7 @@ namespace JimazonLite.Web.Areas.Admin.Controllers
             return View(product);
         }
         [HttpPost]
-        public IActionResult Update(Product product)
+        public IActionResult Update(Product product, IFormFile? file)
         {
             if (product == null)
             {
@@ -103,6 +103,21 @@ namespace JimazonLite.Web.Areas.Admin.Controllers
 
             if (ModelState.IsValid)
             {
+                string rootPath = _webHostEnvironment.WebRootPath;
+                if (file != null)
+                {
+                    string fileName = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);
+                    string productPath = Path.Combine(rootPath, @"images\product");
+
+                    using (var fileStream = new FileStream(Path.Combine(productPath, fileName), FileMode.Create))
+                    {
+                        file.CopyTo(fileStream);
+                    }
+                }
+
+               
+
+
                 _productRepository.Update(product);
                 _productRepository.Save();
                 TempData["success"] = "Product successfully updated";
