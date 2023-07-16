@@ -12,6 +12,8 @@ namespace JimazonLite.Data
     public class ApplicationDbContext : IdentityDbContext
     {
         public DbSet<Product> Products { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<ApplicationUser> ApplicationUsers { get; set; }
         public string DbPath { get; }
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> db) : base(db)
