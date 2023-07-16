@@ -11,6 +11,11 @@ namespace JimazonLite.Web.Areas.Admin.Controllers
     [Area("Admin")]
     public class ProductController : Controller
     {
+        // This is an example of the Dependency Inversion Principle
+        // The Product Controller is a high level module that depends on 
+        // IUnitOfWork (an abstraction) for it's implementation
+        // This makes it easer to change the lower level of code
+        // Without affecting the higher level
         private readonly IUnitOfWork _unitOfWork;
         private readonly IWebHostEnvironment _webHostEnvironment;
         public ProductController(IUnitOfWork unitOfWork, IWebHostEnvironment webHostEnvironment)
