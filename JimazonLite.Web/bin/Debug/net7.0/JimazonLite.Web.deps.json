@@ -3024,6 +3024,9 @@
         }
       },
       "JimazonLite.Utility/1.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Identity.UI": "7.0.9"
+        },
         "runtime": {
           "JimazonLite.Utility.dll": {}
         }

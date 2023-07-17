@@ -2,6 +2,8 @@
 using JimazonLite.Data.Repository.IRepository;
 using JimazonLite.Models;
 using JimazonLite.Models.ViewModels;
+using JimazonLite.Utility;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Collections.Generic;
@@ -9,6 +11,7 @@ using System.Collections.Generic;
 namespace JimazonLite.Web.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = StaticDetails.Role_Admin)]
     public class ProductController : Controller
     {
         // This is an example of the Dependency Inversion Principle
