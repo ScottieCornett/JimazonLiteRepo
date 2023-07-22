@@ -11,6 +11,7 @@
           "JimazonLite.Data": "1.0.0",
           "JimazonLite.Models": "1.0.0",
           "JimazonLite.Utility": "1.0.0",
+          "Microsoft.AspNetCore.Authentication.Google": "7.0.9",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "7.0.9",
           "Microsoft.AspNetCore.Identity.UI": "7.0.9",
           "Microsoft.EntityFrameworkCore.Design": "7.0.9",
@@ -617,6 +618,14 @@
           "Microsoft.AspNetCore.Authentication.Abstractions": "2.2.0",
           "Microsoft.AspNetCore.Http": "2.2.0",
           "Microsoft.AspNetCore.Http.Extensions": "2.2.0"
+        }
+      },
+      "Microsoft.AspNetCore.Authentication.Google/7.0.9": {
+        "runtime": {
+          "lib/net7.0/Microsoft.AspNetCore.Authentication.Google.dll": {
+            "assemblyVersion": "7.0.9.0",
+            "fileVersion": "7.0.923.32110"
+          }
         }
       },
       "Microsoft.AspNetCore.Authorization/2.2.0": {
@@ -3423,6 +3432,13 @@
       "sha512": "sha512-XlVJzJ5wPOYW+Y0J6Q/LVTEyfS4ssLXmt60T0SPP+D8abVhBTl+cgw2gDHlyKYIkcJg7btMVh383NDkMVqD/fg==",
       "path": "microsoft.aspnetcore.authentication.core/2.2.0",
       "hashPath": "microsoft.aspnetcore.authentication.core.2.2.0.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Authentication.Google/7.0.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ufDD7ucvHGKbH+mZVMhFNdPNUDhHzFCNykcKFbqQCytiMC1safbAe/aNWVVY6ZHY6dklEF2uXgMbdk18PG6Vww==",
+      "path": "microsoft.aspnetcore.authentication.google/7.0.9",
+      "hashPath": "microsoft.aspnetcore.authentication.google.7.0.9.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Authorization/2.2.0": {
       "type": "package",

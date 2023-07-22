@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "CBVzLiCXoJ/19I+un4G/L8WU6VcKNAg6i30Ab72/TEuSDb/pc5B/Kz8PrMI8oBVQOw9GsUOz81BabZ2NW0UpKQ==",
+  "dgSpecHash": "55HjldLoNqeAV/EIwvEdKIPljE8aXW2RmkJm5re0CZVM/UwlSahxxuehS4KoAvNT48db6PA44gbPleaSJS/UVQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Scottie\\source\\repos\\JimazonLite\\JimazonLite.Web\\JimazonLite.Web.csproj",
   "expectedPackageFiles": [
@@ -59,6 +59,7 @@
     "C:\\Users\\Scottie\\.nuget\\packages\\microsoft.aspnetcore.antiforgery\\2.2.0\\microsoft.aspnetcore.antiforgery.2.2.0.nupkg.sha512",
     "C:\\Users\\Scottie\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Scottie\\.nuget\\packages\\microsoft.aspnetcore.authentication.core\\2.2.0\\microsoft.aspnetcore.authentication.core.2.2.0.nupkg.sha512",
+    "C:\\Users\\Scottie\\.nuget\\packages\\microsoft.aspnetcore.authentication.google\\7.0.9\\microsoft.aspnetcore.authentication.google.7.0.9.nupkg.sha512",
     "C:\\Users\\Scottie\\.nuget\\packages\\microsoft.aspnetcore.authorization\\2.2.0\\microsoft.aspnetcore.authorization.2.2.0.nupkg.sha512",
     "C:\\Users\\Scottie\\.nuget\\packages\\microsoft.aspnetcore.authorization.policy\\2.2.0\\microsoft.aspnetcore.authorization.policy.2.2.0.nupkg.sha512",
     "C:\\Users\\Scottie\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\7.0.9\\microsoft.aspnetcore.cryptography.internal.7.0.9.nupkg.sha512",

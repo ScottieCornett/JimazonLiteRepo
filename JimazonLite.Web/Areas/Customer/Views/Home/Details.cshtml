@@ -25,30 +25,27 @@
                     <div class="col-12 col-lg-6 offset-lg-1">
 
                         <div class="row col-12 col-md-6 pb-4">
-                            <span class="btn-primary">@Model.Category.Name</span>
+                            <span class="badge alert-info">@Model.Category.Name</span>
                         </div>
                         <div class="row">
-                            <h6 class="text-dark text-opacity-90 ">Quantity Available : @Model.Quantity</h6>
+                            <h4 class="text-dark text-opacity-90 ">Quantity Available : @Model.Quantity</h4>
                         </div>
                         <div class="row">
-                            <h6 class="text-dark text-opacity-90  pb-2">
+                            <h3 class="text-dark text-opacity-90  pb-2">
                                 Price:
-                                <span class="text-danger">
+                                <span class="text-info">
                                     @Model.Price.ToString("C")
                                 </span>
-                            </h6>
-                        </div>
-                      
-                        <div class="row my-3">
-                            <p class="text-primary lh-sm">Item Description:</p>
+                            </h3>
+                            
                             <p class="text-secondary">@Model.Description</p>
                         </div>
-                        
+                      
                         <div class="row">
                             <div class="col-12 col-md-6 pb-1">
                                 <button type="submit" disabled
                                         class="btn btn-primary bg-gradient  w-100 py-2 text-uppercase fw-semibold">
-                                    Add to Cart (Coming Soon...)
+                                    Add to Cart (Not Functional yet)
                                 </button>
                             </div>
                         </div>

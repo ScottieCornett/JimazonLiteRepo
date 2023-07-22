@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "UbXIioQGK3uy5OcIrMlBYsNOMjUHCXkGuKU3ArIZ/BY=",
+  "Hash": "Rqlm73b8lRKc5QcRcLcT5sa66+Y7OW1Fq+8teKk8WXs=",
   "Source": "JimazonLite.Web",
   "BasePath": "_content/JimazonLite.Web",
   "Mode": "Default",
@@ -1122,6 +1122,23 @@
       "OriginalItemSpec": "wwwroot\\images\\product\\0743117e-65a8-4c32-9e47-89d3c7aedd68.jpg"
     },
     {
+      "Identity": "C:\\Users\\Scottie\\source\\repos\\JimazonLite\\JimazonLite.Web\\wwwroot\\images\\product\\0b9b707c-2b0b-4c69-a0e8-7f683921c3ec.jpg",
+      "SourceId": "JimazonLite.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Scottie\\source\\repos\\JimazonLite\\JimazonLite.Web\\wwwroot\\",
+      "BasePath": "_content/JimazonLite.Web",
+      "RelativePath": "images/product/0b9b707c-2b0b-4c69-a0e8-7f683921c3ec.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\product\\0b9b707c-2b0b-4c69-a0e8-7f683921c3ec.jpg"
+    },
+    {
       "Identity": "C:\\Users\\Scottie\\source\\repos\\JimazonLite\\JimazonLite.Web\\wwwroot\\images\\product\\177299a7-01e9-48e9-835b-050c0230a0a7.jpg",
       "SourceId": "JimazonLite.Web",
       "SourceType": "Discovered",
@@ -1139,12 +1156,12 @@
       "OriginalItemSpec": "wwwroot\\images\\product\\177299a7-01e9-48e9-835b-050c0230a0a7.jpg"
     },
     {
-      "Identity": "C:\\Users\\Scottie\\source\\repos\\JimazonLite\\JimazonLite.Web\\wwwroot\\images\\product\\20e06fc6-e0bb-42db-8881-0921340943c8.jpg",
+      "Identity": "C:\\Users\\Scottie\\source\\repos\\JimazonLite\\JimazonLite.Web\\wwwroot\\images\\product\\2f6ebfc9-49f0-4e30-b28a-f3e3ef4d982b.jpg",
       "SourceId": "JimazonLite.Web",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Scottie\\source\\repos\\JimazonLite\\JimazonLite.Web\\wwwroot\\",
       "BasePath": "_content/JimazonLite.Web",
-      "RelativePath": "images/product/20e06fc6-e0bb-42db-8881-0921340943c8.jpg",
+      "RelativePath": "images/product/2f6ebfc9-49f0-4e30-b28a-f3e3ef4d982b.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1153,24 +1170,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\product\\20e06fc6-e0bb-42db-8881-0921340943c8.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\Scottie\\source\\repos\\JimazonLite\\JimazonLite.Web\\wwwroot\\images\\product\\2ca1a301-fc5f-40da-b9dc-6b0e345036d9.jpg",
-      "SourceId": "JimazonLite.Web",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Scottie\\source\\repos\\JimazonLite\\JimazonLite.Web\\wwwroot\\",
-      "BasePath": "_content/JimazonLite.Web",
-      "RelativePath": "images/product/2ca1a301-fc5f-40da-b9dc-6b0e345036d9.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\product\\2ca1a301-fc5f-40da-b9dc-6b0e345036d9.jpg"
+      "OriginalItemSpec": "wwwroot\\images\\product\\2f6ebfc9-49f0-4e30-b28a-f3e3ef4d982b.jpg"
     },
     {
       "Identity": "C:\\Users\\Scottie\\source\\repos\\JimazonLite\\JimazonLite.Web\\wwwroot\\images\\product\\303142a9-7a01-468e-8ae5-528f4c27fa3d.jpg",
@@ -1188,6 +1188,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\product\\303142a9-7a01-468e-8ae5-528f4c27fa3d.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Scottie\\source\\repos\\JimazonLite\\JimazonLite.Web\\wwwroot\\images\\product\\35f44e1d-e97a-4470-a9da-5c6931c64138.jpg",
+      "SourceId": "JimazonLite.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Scottie\\source\\repos\\JimazonLite\\JimazonLite.Web\\wwwroot\\",
+      "BasePath": "_content/JimazonLite.Web",
+      "RelativePath": "images/product/35f44e1d-e97a-4470-a9da-5c6931c64138.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\product\\35f44e1d-e97a-4470-a9da-5c6931c64138.jpg"
     },
     {
       "Identity": "C:\\Users\\Scottie\\source\\repos\\JimazonLite\\JimazonLite.Web\\wwwroot\\images\\product\\3601363d-de86-400a-857b-c8fd62e85848.jpg",
@@ -1224,12 +1241,12 @@
       "OriginalItemSpec": "wwwroot\\images\\product\\39124069-de94-4000-a07b-52fed9699457.jpg"
     },
     {
-      "Identity": "C:\\Users\\Scottie\\source\\repos\\JimazonLite\\JimazonLite.Web\\wwwroot\\images\\product\\4ccefaf3-9b1e-40d4-b2ec-08f1b4fd850c.jpg",
+      "Identity": "C:\\Users\\Scottie\\source\\repos\\JimazonLite\\JimazonLite.Web\\wwwroot\\images\\product\\3ce1528f-273e-440d-855f-e54ab679cb95.jpg",
       "SourceId": "JimazonLite.Web",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Scottie\\source\\repos\\JimazonLite\\JimazonLite.Web\\wwwroot\\",
       "BasePath": "_content/JimazonLite.Web",
-      "RelativePath": "images/product/4ccefaf3-9b1e-40d4-b2ec-08f1b4fd850c.jpg",
+      "RelativePath": "images/product/3ce1528f-273e-440d-855f-e54ab679cb95.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1238,7 +1255,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\product\\4ccefaf3-9b1e-40d4-b2ec-08f1b4fd850c.jpg"
+      "OriginalItemSpec": "wwwroot\\images\\product\\3ce1528f-273e-440d-855f-e54ab679cb95.jpg"
     },
     {
       "Identity": "C:\\Users\\Scottie\\source\\repos\\JimazonLite\\JimazonLite.Web\\wwwroot\\images\\product\\68319424-b0e1-4ac3-887d-c2b36d21b156.jpg",
@@ -1256,23 +1273,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\product\\68319424-b0e1-4ac3-887d-c2b36d21b156.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\Scottie\\source\\repos\\JimazonLite\\JimazonLite.Web\\wwwroot\\images\\product\\6aa2c1a7-4e2c-4048-8dd1-c90f96db68e3.jpg",
-      "SourceId": "JimazonLite.Web",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Scottie\\source\\repos\\JimazonLite\\JimazonLite.Web\\wwwroot\\",
-      "BasePath": "_content/JimazonLite.Web",
-      "RelativePath": "images/product/6aa2c1a7-4e2c-4048-8dd1-c90f96db68e3.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\product\\6aa2c1a7-4e2c-4048-8dd1-c90f96db68e3.jpg"
     },
     {
       "Identity": "C:\\Users\\Scottie\\source\\repos\\JimazonLite\\JimazonLite.Web\\wwwroot\\images\\product\\6e2ee546-6c90-449a-ab4f-a6bd38917eb9.png",
@@ -1343,6 +1343,23 @@
       "OriginalItemSpec": "wwwroot\\images\\product\\7a01bd27-39be-43a5-b0a8-71a371047aba.jpg"
     },
     {
+      "Identity": "C:\\Users\\Scottie\\source\\repos\\JimazonLite\\JimazonLite.Web\\wwwroot\\images\\product\\7e11a6a3-805a-471f-a0c9-a7d1dd6d0db7.jpg",
+      "SourceId": "JimazonLite.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Scottie\\source\\repos\\JimazonLite\\JimazonLite.Web\\wwwroot\\",
+      "BasePath": "_content/JimazonLite.Web",
+      "RelativePath": "images/product/7e11a6a3-805a-471f-a0c9-a7d1dd6d0db7.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\product\\7e11a6a3-805a-471f-a0c9-a7d1dd6d0db7.jpg"
+    },
+    {
       "Identity": "C:\\Users\\Scottie\\source\\repos\\JimazonLite\\JimazonLite.Web\\wwwroot\\images\\product\\8188edc2-ae30-428e-b546-ccd1f146f1f6.jpg",
       "SourceId": "JimazonLite.Web",
       "SourceType": "Discovered",
@@ -1358,23 +1375,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\product\\8188edc2-ae30-428e-b546-ccd1f146f1f6.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\Scottie\\source\\repos\\JimazonLite\\JimazonLite.Web\\wwwroot\\images\\product\\870d5a9c-0d04-4782-93da-cd2a1f990b40.jpg",
-      "SourceId": "JimazonLite.Web",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Scottie\\source\\repos\\JimazonLite\\JimazonLite.Web\\wwwroot\\",
-      "BasePath": "_content/JimazonLite.Web",
-      "RelativePath": "images/product/870d5a9c-0d04-4782-93da-cd2a1f990b40.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\product\\870d5a9c-0d04-4782-93da-cd2a1f990b40.jpg"
     },
     {
       "Identity": "C:\\Users\\Scottie\\source\\repos\\JimazonLite\\JimazonLite.Web\\wwwroot\\images\\product\\8e9efcfb-ba5a-4741-8f57-ab2daa724ae9.jpg",
@@ -1394,6 +1394,40 @@
       "OriginalItemSpec": "wwwroot\\images\\product\\8e9efcfb-ba5a-4741-8f57-ab2daa724ae9.jpg"
     },
     {
+      "Identity": "C:\\Users\\Scottie\\source\\repos\\JimazonLite\\JimazonLite.Web\\wwwroot\\images\\product\\a72415bc-2812-42e6-94a2-98da457c01fa.jpg",
+      "SourceId": "JimazonLite.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Scottie\\source\\repos\\JimazonLite\\JimazonLite.Web\\wwwroot\\",
+      "BasePath": "_content/JimazonLite.Web",
+      "RelativePath": "images/product/a72415bc-2812-42e6-94a2-98da457c01fa.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\product\\a72415bc-2812-42e6-94a2-98da457c01fa.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Scottie\\source\\repos\\JimazonLite\\JimazonLite.Web\\wwwroot\\images\\product\\acab30e9-3a78-4483-ac1a-257649072f17.jpg",
+      "SourceId": "JimazonLite.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Scottie\\source\\repos\\JimazonLite\\JimazonLite.Web\\wwwroot\\",
+      "BasePath": "_content/JimazonLite.Web",
+      "RelativePath": "images/product/acab30e9-3a78-4483-ac1a-257649072f17.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\product\\acab30e9-3a78-4483-ac1a-257649072f17.jpg"
+    },
+    {
       "Identity": "C:\\Users\\Scottie\\source\\repos\\JimazonLite\\JimazonLite.Web\\wwwroot\\images\\product\\aed45e97-7ebe-4333-be74-496ec2ac844c.jpg",
       "SourceId": "JimazonLite.Web",
       "SourceType": "Discovered",
@@ -1409,23 +1443,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\product\\aed45e97-7ebe-4333-be74-496ec2ac844c.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\Scottie\\source\\repos\\JimazonLite\\JimazonLite.Web\\wwwroot\\images\\product\\bd6e66dc-7c02-418a-81f7-bd925198803d.jpg",
-      "SourceId": "JimazonLite.Web",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Scottie\\source\\repos\\JimazonLite\\JimazonLite.Web\\wwwroot\\",
-      "BasePath": "_content/JimazonLite.Web",
-      "RelativePath": "images/product/bd6e66dc-7c02-418a-81f7-bd925198803d.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\product\\bd6e66dc-7c02-418a-81f7-bd925198803d.jpg"
     },
     {
       "Identity": "C:\\Users\\Scottie\\source\\repos\\JimazonLite\\JimazonLite.Web\\wwwroot\\images\\product\\c2e6c1cd-3341-4bef-a192-eda8ee7c02e4.jpg",
@@ -1460,6 +1477,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\product\\ca85484f-0390-4f87-b43a-fd69173181c7.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Scottie\\source\\repos\\JimazonLite\\JimazonLite.Web\\wwwroot\\images\\product\\d3ecb2fa-5216-4f55-b2a5-dce5feead3f0.jpg",
+      "SourceId": "JimazonLite.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Scottie\\source\\repos\\JimazonLite\\JimazonLite.Web\\wwwroot\\",
+      "BasePath": "_content/JimazonLite.Web",
+      "RelativePath": "images/product/d3ecb2fa-5216-4f55-b2a5-dce5feead3f0.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\product\\d3ecb2fa-5216-4f55-b2a5-dce5feead3f0.jpg"
     },
     {
       "Identity": "C:\\Users\\Scottie\\source\\repos\\JimazonLite\\JimazonLite.Web\\wwwroot\\images\\product\\dcf32d71-ff0d-49b8-a5d0-def631d7610b.png",
@@ -1528,40 +1562,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\product\\f7ee337a-35a0-4358-bb1c-54419dffcba0.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\Scottie\\source\\repos\\JimazonLite\\JimazonLite.Web\\wwwroot\\images\\product\\f9ab5a91-3a21-43bc-9006-1fcf781a23c1.jpg",
-      "SourceId": "JimazonLite.Web",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Scottie\\source\\repos\\JimazonLite\\JimazonLite.Web\\wwwroot\\",
-      "BasePath": "_content/JimazonLite.Web",
-      "RelativePath": "images/product/f9ab5a91-3a21-43bc-9006-1fcf781a23c1.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\product\\f9ab5a91-3a21-43bc-9006-1fcf781a23c1.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\Scottie\\source\\repos\\JimazonLite\\JimazonLite.Web\\wwwroot\\images\\product\\fbc51260-2ce3-4978-8153-4a75bd0ff364.jpg",
-      "SourceId": "JimazonLite.Web",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Scottie\\source\\repos\\JimazonLite\\JimazonLite.Web\\wwwroot\\",
-      "BasePath": "_content/JimazonLite.Web",
-      "RelativePath": "images/product/fbc51260-2ce3-4978-8153-4a75bd0ff364.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\product\\fbc51260-2ce3-4978-8153-4a75bd0ff364.jpg"
     },
     {
       "Identity": "C:\\Users\\Scottie\\source\\repos\\JimazonLite\\JimazonLite.Web\\wwwroot\\images\\product\\fc5ebf65-24b6-4f69-92e4-d54073664804.jpg",
