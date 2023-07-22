@@ -33,7 +33,7 @@ namespace JimazonLite.Data
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.Entity<Product>().HasData(
-                new Product { Id = 1, Name = "Electric Guitar", Description = "Donner Electric Guitar", ModelNumber = "DT400", Price = 125.00f, ImageUrl = "", DateAdded = DateTime.Today, Quantity = 1, CategoryId = 5},
+                new Product { Id = 1, Name = "Electric Guitar", Description = "Donner Electric Guitar", ModelNumber = "DT400", Price = 125.00f, ImageUrl = @"images\product\acab30e9-3a78-4483-ac1a-257649072f17.jpg", DateAdded = DateTime.Today, Quantity = 1, CategoryId = 5},
                 new Product { Id = 2, Name = "Studio Speaker", Description = "Yamaha Studio Speaker", ModelNumber = "HS7", Price = 150.00f, ImageUrl = "", DateAdded = DateTime.Today, Quantity = 1, CategoryId = 1 },
                 new Product { Id = 3, Name = "Camping Cot", Description = "Folding Camping Cot", ModelNumber = "", Price = 50.00f, ImageUrl = "", DateAdded = DateTime.Today, Quantity = 1, CategoryId = 3 },
                 new Product { Id = 4, Name = "Bicycle", Description = "Koda Retrospec Bicycle", ModelNumber = "", Price = 40.00f, ImageUrl = "", DateAdded = DateTime.Today, Quantity = 1, CategoryId = 3 },
