@@ -26,7 +26,7 @@ namespace JimazonLite.Data
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             //optionsBuilder.UseSqlite($"Data Source={DbPath}");
-            optionsBuilder.UseSqlite(@"Data Source=C:\Users\Scottie\Desktop\Temp\JimazonLite.db");
+            optionsBuilder.UseSqlite(@"Data Source=C:\Users\Scottie\source\repos\JimazonLite\DbStorage\JimazonLite.db");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
