@@ -25,7 +25,8 @@ namespace JimazonLite.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite($"Data Source={DbPath}");
+            //optionsBuilder.UseSqlite($"Data Source={DbPath}");
+            optionsBuilder.UseSqlite(@"Data Source=C:\Users\Scottie\Desktop\Temp\JimazonLite.db");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -33,10 +34,10 @@ namespace JimazonLite.Data
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.Entity<Product>().HasData(
-                new Product { Id = 1, Name = "Electric Guitar", Description = "Donner Electric Guitar", ModelNumber = "DT400", Price = 125.00f, ImageUrl = @"images\product\acab30e9-3a78-4483-ac1a-257649072f17.jpg", DateAdded = DateTime.Today, Quantity = 1, CategoryId = 5},
+                new Product { Id = 1, Name = "Electric Guitar", Description = "Donner Electric Guitar", ModelNumber = "DT400", Price = 130.00f, ImageUrl = @"images\product\acab30e9-3a78-4483-ac1a-257649072f17.jpg", DateAdded = DateTime.Today, Quantity = 1, CategoryId = 5},
                 new Product { Id = 2, Name = "Studio Speaker", Description = "Yamaha Studio Speaker", ModelNumber = "HS7", Price = 150.00f, ImageUrl = @"images\product\a72415bc-2812-42e6-94a2-98da457c01fa.jpg", DateAdded = DateTime.Today, Quantity = 1, CategoryId = 1 },
                 new Product { Id = 3, Name = "ASUS ROG RTX 3080Ti", Description = "Asus Republic of Gamers Nvidia RTX 3080Ti 12GB", ModelNumber = "", Price = 800f, ImageUrl = @"images\product\7e11a6a3-805a-471f-a0c9-a7d1dd6d0db7.jpg", DateAdded = DateTime.Today, Quantity = 1, CategoryId = 1 },
-                new Product { Id = 4, Name = "Bicycle", Description = "Koda Retrospec Bicycle", ModelNumber = "KODA14A", Price = 40.00f, ImageUrl = @"images\product\c459486b-f50a-4841-8f84-2a52914e6f74.jpg", DateAdded = DateTime.Today, Quantity = 1, CategoryId = 3 },
+                new Product { Id = 4, Name = "Bicycle", Description = "Koda Retrospec Bicycle", ModelNumber = "KODA14A", Price = 40.00f, ImageUrl = @"images\product\0d4d8414-c74c-45ca-9483-7057638939f9.jpg", DateAdded = DateTime.Today, Quantity = 1, CategoryId = 3 },
                 new Product { Id = 5, Name = "Hedge Trimmer", Description = "GreenWorks 24V Hedge Trimmer", ModelNumber = "GRNW9687", Price = 35.00f, ImageUrl = @"images\product\35f44e1d-e97a-4470-a9da-5c6931c64138.jpg", DateAdded = DateTime.Today, Quantity = 1, CategoryId = 4 },
                 new Product { Id = 6, Name = "Flight Stick", Description = "Thrustmaster T-Hotas Flight Stick for Xbox/PX", ModelNumber = "THR5521", Price = 90.00f,ImageUrl = @"images\product\2f6ebfc9-49f0-4e30-b28a-f3e3ef4d982b.jpg", DateAdded = DateTime.Today, Quantity = 1, CategoryId = 1 },
                 new Product { Id = 7, Name = "Xbox Series X", Description = "Xbox Series X 1TB Video Game Console", ModelNumber = "MCSFTXBX901A", Price = 400.00f, ImageUrl = @"images\product\3ce1528f-273e-440d-855f-e54ab679cb95.jpg", DateAdded = DateTime.Today, Quantity = 1, CategoryId = 1 },

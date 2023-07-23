@@ -114,7 +114,7 @@ namespace JimazonLite.Data.Migrations
                             ImageUrl = "images\\product\\acab30e9-3a78-4483-ac1a-257649072f17.jpg",
                             ModelNumber = "DT400",
                             Name = "Electric Guitar",
-                            Price = 125f,
+                            Price = 130f,
                             Quantity = 1
                         },
                         new
@@ -147,7 +147,7 @@ namespace JimazonLite.Data.Migrations
                             CategoryId = 3,
                             DateAdded = new DateTime(2023, 7, 22, 0, 0, 0, 0, DateTimeKind.Local),
                             Description = "Koda Retrospec Bicycle",
-                            ImageUrl = "images\\product\\c459486b-f50a-4841-8f84-2a52914e6f74.jpg",
+                            ImageUrl = "images\\product\\0d4d8414-c74c-45ca-9483-7057638939f9.jpg",
                             ModelNumber = "KODA14A",
                             Name = "Bicycle",
                             Price = 40f,

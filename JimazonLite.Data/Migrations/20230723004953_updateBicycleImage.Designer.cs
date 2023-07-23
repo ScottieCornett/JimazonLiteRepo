@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace JimazonLite.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230716040154_addIdentityTables")]
-    partial class addIdentityTables
+    [Migration("20230723004953_updateBicycleImage")]
+    partial class updateBicycleImage
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -32,7 +32,7 @@ namespace JimazonLite.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Category");
+                    b.ToTable("Categories");
 
                     b.HasData(
                         new
@@ -112,21 +112,21 @@ namespace JimazonLite.Data.Migrations
                         {
                             Id = 1,
                             CategoryId = 5,
-                            DateAdded = new DateTime(2023, 7, 16, 0, 0, 0, 0, DateTimeKind.Local),
+                            DateAdded = new DateTime(2023, 7, 22, 0, 0, 0, 0, DateTimeKind.Local),
                             Description = "Donner Electric Guitar",
-                            ImageUrl = "",
+                            ImageUrl = "images\\product\\acab30e9-3a78-4483-ac1a-257649072f17.jpg",
                             ModelNumber = "DT400",
                             Name = "Electric Guitar",
-                            Price = 125f,
+                            Price = 130f,
                             Quantity = 1
                         },
                         new
                         {
                             Id = 2,
                             CategoryId = 1,
-                            DateAdded = new DateTime(2023, 7, 16, 0, 0, 0, 0, DateTimeKind.Local),
+                            DateAdded = new DateTime(2023, 7, 22, 0, 0, 0, 0, DateTimeKind.Local),
                             Description = "Yamaha Studio Speaker",
-                            ImageUrl = "",
+                            ImageUrl = "images\\product\\a72415bc-2812-42e6-94a2-98da457c01fa.jpg",
                             ModelNumber = "HS7",
                             Name = "Studio Speaker",
                             Price = 150f,
@@ -135,23 +135,23 @@ namespace JimazonLite.Data.Migrations
                         new
                         {
                             Id = 3,
-                            CategoryId = 3,
-                            DateAdded = new DateTime(2023, 7, 16, 0, 0, 0, 0, DateTimeKind.Local),
-                            Description = "Folding Camping Cot",
-                            ImageUrl = "",
+                            CategoryId = 1,
+                            DateAdded = new DateTime(2023, 7, 22, 0, 0, 0, 0, DateTimeKind.Local),
+                            Description = "Asus Republic of Gamers Nvidia RTX 3080Ti 12GB",
+                            ImageUrl = "images\\product\\7e11a6a3-805a-471f-a0c9-a7d1dd6d0db7.jpg",
                             ModelNumber = "",
-                            Name = "Camping Cot",
-                            Price = 50f,
+                            Name = "ASUS ROG RTX 3080Ti",
+                            Price = 800f,
                             Quantity = 1
                         },
                         new
                         {
                             Id = 4,
                             CategoryId = 3,
-                            DateAdded = new DateTime(2023, 7, 16, 0, 0, 0, 0, DateTimeKind.Local),
+                            DateAdded = new DateTime(2023, 7, 22, 0, 0, 0, 0, DateTimeKind.Local),
                             Description = "Koda Retrospec Bicycle",
-                            ImageUrl = "",
-                            ModelNumber = "",
+                            ImageUrl = "images\\product\\0d4d8414-c74c-45ca-9483-7057638939f9.jpg",
+                            ModelNumber = "KODA14A",
                             Name = "Bicycle",
                             Price = 40f,
                             Quantity = 1
@@ -160,12 +160,48 @@ namespace JimazonLite.Data.Migrations
                         {
                             Id = 5,
                             CategoryId = 4,
-                            DateAdded = new DateTime(2023, 7, 16, 0, 0, 0, 0, DateTimeKind.Local),
+                            DateAdded = new DateTime(2023, 7, 22, 0, 0, 0, 0, DateTimeKind.Local),
                             Description = "GreenWorks 24V Hedge Trimmer",
-                            ImageUrl = "",
-                            ModelNumber = "",
+                            ImageUrl = "images\\product\\35f44e1d-e97a-4470-a9da-5c6931c64138.jpg",
+                            ModelNumber = "GRNW9687",
                             Name = "Hedge Trimmer",
                             Price = 35f,
+                            Quantity = 1
+                        },
+                        new
+                        {
+                            Id = 6,
+                            CategoryId = 1,
+                            DateAdded = new DateTime(2023, 7, 22, 0, 0, 0, 0, DateTimeKind.Local),
+                            Description = "Thrustmaster T-Hotas Flight Stick for Xbox/PX",
+                            ImageUrl = "images\\product\\2f6ebfc9-49f0-4e30-b28a-f3e3ef4d982b.jpg",
+                            ModelNumber = "THR5521",
+                            Name = "Flight Stick",
+                            Price = 90f,
+                            Quantity = 1
+                        },
+                        new
+                        {
+                            Id = 7,
+                            CategoryId = 1,
+                            DateAdded = new DateTime(2023, 7, 22, 0, 0, 0, 0, DateTimeKind.Local),
+                            Description = "Xbox Series X 1TB Video Game Console",
+                            ImageUrl = "images\\product\\3ce1528f-273e-440d-855f-e54ab679cb95.jpg",
+                            ModelNumber = "MCSFTXBX901A",
+                            Name = "Xbox Series X",
+                            Price = 400f,
+                            Quantity = 1
+                        },
+                        new
+                        {
+                            Id = 8,
+                            CategoryId = 1,
+                            DateAdded = new DateTime(2023, 7, 22, 0, 0, 0, 0, DateTimeKind.Local),
+                            Description = "MSI Gaming Trio Nvidia RTX 4900 24BG",
+                            ImageUrl = "images\\product\\d3ecb2fa-5216-4f55-b2a5-dce5feead3f0.jpg",
+                            ModelNumber = "MSI4090",
+                            Name = "MSI RTX 4090",
+                            Price = 1350f,
                             Quantity = 1
                         });
                 });
@@ -231,6 +267,10 @@ namespace JimazonLite.Data.Migrations
                         .IsConcurrencyToken()
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("Discriminator")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("Email")
                         .HasMaxLength(256)
                         .HasColumnType("TEXT");
@@ -281,6 +321,10 @@ namespace JimazonLite.Data.Migrations
                         .HasDatabaseName("UserNameIndex");
 
                     b.ToTable("AspNetUsers", (string)null);
+
+                    b.HasDiscriminator<string>("Discriminator").HasValue("IdentityUser");
+
+                    b.UseTphMappingStrategy();
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
@@ -309,11 +353,9 @@ namespace JimazonLite.Data.Migrations
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
                     b.Property<string>("LoginProvider")
-                        .HasMaxLength(128)
                         .HasColumnType("TEXT");
 
                     b.Property<string>("ProviderKey")
-                        .HasMaxLength(128)
                         .HasColumnType("TEXT");
 
                     b.Property<string>("ProviderDisplayName")
@@ -351,11 +393,9 @@ namespace JimazonLite.Data.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("LoginProvider")
-                        .HasMaxLength(128)
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Name")
-                        .HasMaxLength(128)
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Value")
@@ -364,6 +404,29 @@ namespace JimazonLite.Data.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens", (string)null);
+                });
+
+            modelBuilder.Entity("JimazonLite.Models.ApplicationUser", b =>
+                {
+                    b.HasBaseType("Microsoft.AspNetCore.Identity.IdentityUser");
+
+                    b.Property<string>("City")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("PostalCode")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("State")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("StreetAddress")
+                        .HasColumnType("TEXT");
+
+                    b.HasDiscriminator().HasValue("ApplicationUser");
                 });
 
             modelBuilder.Entity("JimazonLite.Models.Product", b =>

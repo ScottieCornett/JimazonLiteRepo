@@ -3,10 +3,12 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
+#pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
+
 namespace JimazonLite.Data.Migrations
 {
     /// <inheritdoc />
-    public partial class addIdentityTables : Migration
+    public partial class init : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -30,6 +32,12 @@ namespace JimazonLite.Data.Migrations
                 columns: table => new
                 {
                     Id = table.Column<string>(type: "TEXT", nullable: false),
+                    Discriminator = table.Column<string>(type: "TEXT", nullable: false),
+                    Name = table.Column<string>(type: "TEXT", nullable: true),
+                    StreetAddress = table.Column<string>(type: "TEXT", nullable: true),
+                    City = table.Column<string>(type: "TEXT", nullable: true),
+                    State = table.Column<string>(type: "TEXT", nullable: true),
+                    PostalCode = table.Column<string>(type: "TEXT", nullable: true),
                     UserName = table.Column<string>(type: "TEXT", maxLength: 256, nullable: true),
                     NormalizedUserName = table.Column<string>(type: "TEXT", maxLength: 256, nullable: true),
                     Email = table.Column<string>(type: "TEXT", maxLength: 256, nullable: true),
@@ -48,6 +56,19 @@ namespace JimazonLite.Data.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_AspNetUsers", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Categories",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Name = table.Column<string>(type: "TEXT", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Categories", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -96,8 +117,8 @@ namespace JimazonLite.Data.Migrations
                 name: "AspNetUserLogins",
                 columns: table => new
                 {
-                    LoginProvider = table.Column<string>(type: "TEXT", maxLength: 128, nullable: false),
-                    ProviderKey = table.Column<string>(type: "TEXT", maxLength: 128, nullable: false),
+                    LoginProvider = table.Column<string>(type: "TEXT", nullable: false),
+                    ProviderKey = table.Column<string>(type: "TEXT", nullable: false),
                     ProviderDisplayName = table.Column<string>(type: "TEXT", nullable: true),
                     UserId = table.Column<string>(type: "TEXT", nullable: false)
                 },
@@ -141,8 +162,8 @@ namespace JimazonLite.Data.Migrations
                 columns: table => new
                 {
                     UserId = table.Column<string>(type: "TEXT", nullable: false),
-                    LoginProvider = table.Column<string>(type: "TEXT", maxLength: 128, nullable: false),
-                    Name = table.Column<string>(type: "TEXT", maxLength: 128, nullable: false),
+                    LoginProvider = table.Column<string>(type: "TEXT", nullable: false),
+                    Name = table.Column<string>(type: "TEXT", nullable: false),
                     Value = table.Column<string>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
@@ -156,40 +177,58 @@ namespace JimazonLite.Data.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
-            migrationBuilder.UpdateData(
-                table: "Products",
-                keyColumn: "Id",
-                keyValue: 1,
-                column: "DateAdded",
-                value: new DateTime(2023, 7, 16, 0, 0, 0, 0, DateTimeKind.Local));
+            migrationBuilder.CreateTable(
+                name: "Products",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Name = table.Column<string>(type: "TEXT", nullable: false),
+                    Description = table.Column<string>(type: "TEXT", nullable: false),
+                    Price = table.Column<float>(type: "REAL", nullable: false),
+                    Quantity = table.Column<int>(type: "INTEGER", nullable: false),
+                    ModelNumber = table.Column<string>(type: "TEXT", nullable: false),
+                    ImageUrl = table.Column<string>(type: "TEXT", nullable: false),
+                    DateAdded = table.Column<DateTime>(type: "TEXT", nullable: false),
+                    CategoryId = table.Column<int>(type: "INTEGER", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Products", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Products_Categories_CategoryId",
+                        column: x => x.CategoryId,
+                        principalTable: "Categories",
+                        principalColumn: "Id");
+                });
 
-            migrationBuilder.UpdateData(
-                table: "Products",
-                keyColumn: "Id",
-                keyValue: 2,
-                column: "DateAdded",
-                value: new DateTime(2023, 7, 16, 0, 0, 0, 0, DateTimeKind.Local));
+            migrationBuilder.InsertData(
+                table: "Categories",
+                columns: new[] { "Id", "Name" },
+                values: new object[,]
+                {
+                    { 1, "Electronics" },
+                    { 2, "Appliances" },
+                    { 3, "Sporting Goods and Outdoors" },
+                    { 4, "Lawn and Garden" },
+                    { 5, "Musical Instruments" },
+                    { 6, "Furniture" }
+                });
 
-            migrationBuilder.UpdateData(
+            migrationBuilder.InsertData(
                 table: "Products",
-                keyColumn: "Id",
-                keyValue: 3,
-                column: "DateAdded",
-                value: new DateTime(2023, 7, 16, 0, 0, 0, 0, DateTimeKind.Local));
-
-            migrationBuilder.UpdateData(
-                table: "Products",
-                keyColumn: "Id",
-                keyValue: 4,
-                column: "DateAdded",
-                value: new DateTime(2023, 7, 16, 0, 0, 0, 0, DateTimeKind.Local));
-
-            migrationBuilder.UpdateData(
-                table: "Products",
-                keyColumn: "Id",
-                keyValue: 5,
-                column: "DateAdded",
-                value: new DateTime(2023, 7, 16, 0, 0, 0, 0, DateTimeKind.Local));
+                columns: new[] { "Id", "CategoryId", "DateAdded", "Description", "ImageUrl", "ModelNumber", "Name", "Price", "Quantity" },
+                values: new object[,]
+                {
+                    { 1, 5, new DateTime(2023, 7, 22, 0, 0, 0, 0, DateTimeKind.Local), "Donner Electric Guitar", "images\\product\\acab30e9-3a78-4483-ac1a-257649072f17.jpg", "DT400", "Electric Guitar", 130f, 1 },
+                    { 2, 1, new DateTime(2023, 7, 22, 0, 0, 0, 0, DateTimeKind.Local), "Yamaha Studio Speaker", "images\\product\\a72415bc-2812-42e6-94a2-98da457c01fa.jpg", "HS7", "Studio Speaker", 150f, 1 },
+                    { 3, 1, new DateTime(2023, 7, 22, 0, 0, 0, 0, DateTimeKind.Local), "Asus Republic of Gamers Nvidia RTX 3080Ti 12GB", "images\\product\\7e11a6a3-805a-471f-a0c9-a7d1dd6d0db7.jpg", "", "ASUS ROG RTX 3080Ti", 800f, 1 },
+                    { 4, 3, new DateTime(2023, 7, 22, 0, 0, 0, 0, DateTimeKind.Local), "Koda Retrospec Bicycle", "images\\product\\c459486b-f50a-4841-8f84-2a52914e6f74.jpg", "KODA14A", "Bicycle", 40f, 1 },
+                    { 5, 4, new DateTime(2023, 7, 22, 0, 0, 0, 0, DateTimeKind.Local), "GreenWorks 24V Hedge Trimmer", "images\\product\\35f44e1d-e97a-4470-a9da-5c6931c64138.jpg", "GRNW9687", "Hedge Trimmer", 35f, 1 },
+                    { 6, 1, new DateTime(2023, 7, 22, 0, 0, 0, 0, DateTimeKind.Local), "Thrustmaster T-Hotas Flight Stick for Xbox/PX", "images\\product\\2f6ebfc9-49f0-4e30-b28a-f3e3ef4d982b.jpg", "THR5521", "Flight Stick", 90f, 1 },
+                    { 7, 1, new DateTime(2023, 7, 22, 0, 0, 0, 0, DateTimeKind.Local), "Xbox Series X 1TB Video Game Console", "images\\product\\3ce1528f-273e-440d-855f-e54ab679cb95.jpg", "MCSFTXBX901A", "Xbox Series X", 400f, 1 },
+                    { 8, 1, new DateTime(2023, 7, 22, 0, 0, 0, 0, DateTimeKind.Local), "MSI Gaming Trio Nvidia RTX 4900 24BG", "images\\product\\d3ecb2fa-5216-4f55-b2a5-dce5feead3f0.jpg", "MSI4090", "MSI RTX 4090", 1350f, 1 }
+                });
 
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
@@ -227,6 +266,11 @@ namespace JimazonLite.Data.Migrations
                 table: "AspNetUsers",
                 column: "NormalizedUserName",
                 unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Products_CategoryId",
+                table: "Products",
+                column: "CategoryId");
         }
 
         /// <inheritdoc />
@@ -248,45 +292,16 @@ namespace JimazonLite.Data.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
+                name: "Products");
+
+            migrationBuilder.DropTable(
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");
 
-            migrationBuilder.UpdateData(
-                table: "Products",
-                keyColumn: "Id",
-                keyValue: 1,
-                column: "DateAdded",
-                value: new DateTime(2023, 7, 9, 0, 0, 0, 0, DateTimeKind.Local));
-
-            migrationBuilder.UpdateData(
-                table: "Products",
-                keyColumn: "Id",
-                keyValue: 2,
-                column: "DateAdded",
-                value: new DateTime(2023, 7, 9, 0, 0, 0, 0, DateTimeKind.Local));
-
-            migrationBuilder.UpdateData(
-                table: "Products",
-                keyColumn: "Id",
-                keyValue: 3,
-                column: "DateAdded",
-                value: new DateTime(2023, 7, 9, 0, 0, 0, 0, DateTimeKind.Local));
-
-            migrationBuilder.UpdateData(
-                table: "Products",
-                keyColumn: "Id",
-                keyValue: 4,
-                column: "DateAdded",
-                value: new DateTime(2023, 7, 9, 0, 0, 0, 0, DateTimeKind.Local));
-
-            migrationBuilder.UpdateData(
-                table: "Products",
-                keyColumn: "Id",
-                keyValue: 5,
-                column: "DateAdded",
-                value: new DateTime(2023, 7, 9, 0, 0, 0, 0, DateTimeKind.Local));
+            migrationBuilder.DropTable(
+                name: "Categories");
         }
     }
 }
