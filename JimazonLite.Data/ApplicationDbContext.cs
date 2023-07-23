@@ -18,9 +18,9 @@ namespace JimazonLite.Data
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> db) : base(db)
         {
-            var folder = Environment.SpecialFolder.LocalApplicationData;
-            var path = Environment.GetFolderPath(folder);
-            DbPath = System.IO.Path.Join(path, "JimazonLite.db");
+            //var folder = Environment.SpecialFolder.LocalApplicationData;
+            //var path = Environment.GetFolderPath(folder);
+            //DbPath = System.IO.Path.Join(path, "JimazonLite.db");
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -34,14 +34,14 @@ namespace JimazonLite.Data
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.Entity<Product>().HasData(
-                new Product { Id = 1, Name = "Electric Guitar", Description = "Donner Electric Guitar", ModelNumber = "DT400", Price = 130.00f, ImageUrl = @"images\product\acab30e9-3a78-4483-ac1a-257649072f17.jpg", DateAdded = DateTime.Today, Quantity = 1, CategoryId = 5},
-                new Product { Id = 2, Name = "Studio Speaker", Description = "Yamaha Studio Speaker", ModelNumber = "HS7", Price = 150.00f, ImageUrl = @"images\product\a72415bc-2812-42e6-94a2-98da457c01fa.jpg", DateAdded = DateTime.Today, Quantity = 1, CategoryId = 1 },
-                new Product { Id = 3, Name = "ASUS ROG RTX 3080Ti", Description = "Asus Republic of Gamers Nvidia RTX 3080Ti 12GB", ModelNumber = "", Price = 800f, ImageUrl = @"images\product\7e11a6a3-805a-471f-a0c9-a7d1dd6d0db7.jpg", DateAdded = DateTime.Today, Quantity = 1, CategoryId = 1 },
+                new Product { Id = 1, Name = "Electric Guitar", Description = "Donner Electric Guitar", ModelNumber = "DT400", Price = 130.00f, ImageUrl = @"images\product\cda4d0fe-32d4-479e-bc08-1c07ec5215ee.jpg", DateAdded = DateTime.Today, Quantity = 1, CategoryId = 5},
+                new Product { Id = 2, Name = "Studio Speaker", Description = "Yamaha Studio Speaker", ModelNumber = "HS7", Price = 150.00f, ImageUrl = @"images\product\f9f20438-8fdd-4ad6-ba13-3f51b7274e32.jpg", DateAdded = DateTime.Today, Quantity = 1, CategoryId = 1 },
+                new Product { Id = 3, Name = "ASUS ROG RTX 3080Ti", Description = "Asus Republic of Gamers Nvidia RTX 3080Ti 12GB", ModelNumber = "", Price = 800f, ImageUrl = @"images\product\2852c5e5-50c0-4723-bafa-c3c5f4e49690.jpg", DateAdded = DateTime.Today, Quantity = 1, CategoryId = 1 },
                 new Product { Id = 4, Name = "Bicycle", Description = "Koda Retrospec Bicycle", ModelNumber = "KODA14A", Price = 40.00f, ImageUrl = @"images\product\0d4d8414-c74c-45ca-9483-7057638939f9.jpg", DateAdded = DateTime.Today, Quantity = 1, CategoryId = 3 },
-                new Product { Id = 5, Name = "Hedge Trimmer", Description = "GreenWorks 24V Hedge Trimmer", ModelNumber = "GRNW9687", Price = 35.00f, ImageUrl = @"images\product\35f44e1d-e97a-4470-a9da-5c6931c64138.jpg", DateAdded = DateTime.Today, Quantity = 1, CategoryId = 4 },
-                new Product { Id = 6, Name = "Flight Stick", Description = "Thrustmaster T-Hotas Flight Stick for Xbox/PX", ModelNumber = "THR5521", Price = 90.00f,ImageUrl = @"images\product\2f6ebfc9-49f0-4e30-b28a-f3e3ef4d982b.jpg", DateAdded = DateTime.Today, Quantity = 1, CategoryId = 1 },
-                new Product { Id = 7, Name = "Xbox Series X", Description = "Xbox Series X 1TB Video Game Console", ModelNumber = "MCSFTXBX901A", Price = 400.00f, ImageUrl = @"images\product\3ce1528f-273e-440d-855f-e54ab679cb95.jpg", DateAdded = DateTime.Today, Quantity = 1, CategoryId = 1 },
-                new Product { Id = 8, Name = "MSI RTX 4090", Description = "MSI Gaming Trio Nvidia RTX 4900 24BG", ModelNumber = "MSI4090", Price = 1350.00f ,ImageUrl = @"images\product\d3ecb2fa-5216-4f55-b2a5-dce5feead3f0.jpg", DateAdded = DateTime.Today, Quantity = 1, CategoryId = 1 });
+                new Product { Id = 5, Name = "Hedge Trimmer", Description = "GreenWorks 24V Hedge Trimmer", ModelNumber = "GRNW9687", Price = 35.00f, ImageUrl = @"images\product\d2ab5aaa-9684-4cc5-8d6a-a3536c11a405.jpg", DateAdded = DateTime.Today, Quantity = 1, CategoryId = 4 },
+                new Product { Id = 6, Name = "Flight Stick", Description = "Thrustmaster T-Hotas Flight Stick for Xbox/PX", ModelNumber = "THR5521", Price = 90.00f,ImageUrl = @"images\product\31576b7c-a633-4d74-9fd5-2aded0e2fdd7.jpg", DateAdded = DateTime.Today, Quantity = 1, CategoryId = 1 },
+                new Product { Id = 7, Name = "Xbox Series X", Description = "Xbox Series X 1TB Video Game Console", ModelNumber = "MCSFTXBX901A", Price = 400.00f, ImageUrl = @"images\product\fcec7f75-8d7e-4b95-aeb8-8e3b6f3b8754.jpg", DateAdded = DateTime.Today, Quantity = 1, CategoryId = 1 },
+                new Product { Id = 8, Name = "MSI RTX 4090", Description = "MSI Gaming Trio Nvidia RTX 4900 24BG", ModelNumber = "MSI4090", Price = 1350.00f ,ImageUrl = @"images\product\dff28cfc-48f8-43a1-9db1-c785afb631cd.jpg", DateAdded = DateTime.Today, Quantity = 1, CategoryId = 1 });
 
             modelBuilder.Entity<Category>().HasData(
                 new Category { Id = 1, Name = "Electronics"},
