@@ -88,30 +88,6 @@ namespace JimazonLite.Web.Areas.Admin.Controllers
             }
             return View();
         }
-        [HttpGet]
-        public IActionResult Delete(int? id)
-        {
-            if (id == null || id == 0)
-            {
-                return NotFound();
-            }
 
-            Category category = _unitOfWork.Category.Get(u => u.Id == id);
-            if (category == null)
-            {
-                return NotFound();
-            }
-            return View(category);
-        }
-        [HttpPost, ActionName("Delete")]
-        public IActionResult DeleteCategory(int? id)
-        {
-            Category category = _unitOfWork.Category.Get(u => u.Id == id);
-
-            _unitOfWork.Category.Remove(category);
-            _unitOfWork.Save();
-            TempData["success"] = "Category deleted successfully";
-            return RedirectToAction("Index");
-        }
     }
 }
