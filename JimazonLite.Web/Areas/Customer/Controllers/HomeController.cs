@@ -28,6 +28,11 @@ namespace JimazonLite.Web.Areas.Customer.Controllers
             Product product = _unitOfWork.Product.Get(u => u.Id == id, includeProperties: "Category");
             return View(product);
         }
+        public IActionResult BuyNow(int id)
+        {
+            Product product = _unitOfWork.Product.Get(u => u.Id == id, includeProperties: "Category");
+            return View(product);
+        }
 
         public IActionResult Privacy()
         {
