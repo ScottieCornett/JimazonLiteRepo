@@ -13,7 +13,7 @@ namespace JimazonLite.Data.Repository.IRepository
         // As updating a product may be different than updating than a category,
         // a more specific update method is used so no code is forced to depend
         // on methods it does not use.
-        void Update(Product product);
+        Task Update(Product product);
                 
     }
 }

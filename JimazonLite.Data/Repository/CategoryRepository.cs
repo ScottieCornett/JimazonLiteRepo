@@ -16,7 +16,7 @@ namespace JimazonLite.Data.Repository
         {
             _dbContext = dbContext;
         }
-        public void Update(Category category)
+        public async Task Update(Category category)
         {
             _dbContext.Update(category);
         }

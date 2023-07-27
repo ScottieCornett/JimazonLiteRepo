@@ -20,9 +20,9 @@ namespace JimazonLite.Data.Repository
             _dbContext.Products.Include(u => u.Category);
             // _db.Products == dbSet
         }
-        public void Add(T entity)
+        public async Task Add(T entity)
         {
-            dbSet.Add(entity);
+            await dbSet.AddAsync(entity);
         }
 
         public async Task<T> GetAsync(Expression<Func<T, bool>> filter, string? includeProperties = null)
@@ -54,7 +54,7 @@ namespace JimazonLite.Data.Repository
             return query.ToList();
         }
 
-        public void Remove(T entity)
+        public async Task Remove(T entity)
         {
             dbSet.Remove(entity);
         }

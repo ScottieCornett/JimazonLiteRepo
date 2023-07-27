@@ -11,8 +11,8 @@ namespace JimazonLite.Data.Repository.IRepository
     {
         IEnumerable<T> GetAll(string? includeProperties = null);
         Task<T> GetAsync(Expression<Func<T, bool>> filter, string? includeProperties = null);
-        void Add(T entity);
-        void Remove(T entity);
+        Task Add(T entity);
+        Task Remove(T entity);
         void RemoveRange(IEnumerable<T> entities);
     }
 }

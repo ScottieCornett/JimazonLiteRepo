@@ -61,7 +61,7 @@ namespace JimazonLite.Web.Areas.Admin.Controllers
                     
         }
         [HttpPost]
-        public IActionResult Upsert(ProductVM productVM, IFormFile? file)
+        public async Task<IActionResult> Upsert(ProductVM productVM, IFormFile? file)
         {
        
             if (ModelState.IsValid)
@@ -93,11 +93,11 @@ namespace JimazonLite.Web.Areas.Admin.Controllers
 
                 if (productVM.Product.Id == 0)
                 {
-                    _unitOfWork.Product.Add(productVM.Product);
+                    await _unitOfWork.Product.Add(productVM.Product);
                 }
                 else
                 {
-                    _unitOfWork.Product.Update(productVM.Product);
+                    await _unitOfWork.Product.Update(productVM.Product);
                 }
                 
                 _unitOfWork.Save();

@@ -17,7 +17,7 @@ namespace JimazonLite.Data.Repository
             _dbContext = dbContext;
         }
     
-        public void Update(Product product)
+        public async Task Update(Product product)
         {
             // This is an example of the Interface Segregation Principle from SOLID
             // As updating a product may be different than updating than a category,
