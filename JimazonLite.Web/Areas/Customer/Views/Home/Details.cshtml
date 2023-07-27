@@ -1,0 +1,59 @@
+﻿@model Product
+
+<form method="post">
+    <input hidden asp-for="Id"/>
+    <div class="card shadow border-0 mt-4">
+        <div class="card-header bg-secondary bg-gradient text-light py-4">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h3 class="text-white text-uppercase">@Model.Name</h3>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="py-3">
+                <div class="row">
+                    <div class="col-6 col-md-2 offset-lg-1 pb-1">
+                        <a asp-action="Index" class="btn btn-outline-primary bg-gradient mb-5 fw-semibold btn-sm text-uppercase">
+                            <small>Back to home</small>
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-lg-3 offset-lg-1 text-center mb-3">
+                        <img src="@Model.ImageUrl" class="rounded" width="100%"/>
+                    </div>
+                    <div class="col-12 col-lg-6 offset-lg-1">
+                        <div class="row col-12 col-md-6 pb-4">
+                            <span class="badge alert-info">@Model.Category.Name</span>
+                        </div>
+                        
+                        <div class="row">
+                            <h4 class="text-dark text-opacity-90 ">Quantity Available : @Model.Quantity</h4>
+                        </div>
+                        <div class="row">
+                            <h3 class="text-dark text-opacity-90  pb-2">
+                                Price:
+                                <span class="text-info">
+                                    @Model.Price.ToString("C")
+                                </span>
+                            </h3>
+                            
+                            <p class="text-secondary">@Model.Description</p>
+                        </div>
+                      
+                        <div class="row">
+                            <div class="col-12 col-md-6 pb-1">
+                                <a asp-action="BuyNow" asp-route-id="@Model.Id"
+                                        class="btn btn-primary bg-gradient  w-100 py-2 text-uppercase fw-semibold">
+                                    Buy Now!!!
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
