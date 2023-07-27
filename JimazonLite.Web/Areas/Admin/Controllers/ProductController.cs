@@ -34,7 +34,7 @@ namespace JimazonLite.Web.Areas.Admin.Controllers
             return View(productList);
         }
         [HttpGet]
-        public IActionResult Upsert(int? id)
+        public async Task<IActionResult> Upsert(int? id)
         {          
             ProductVM productVM = new()
             {
@@ -55,7 +55,7 @@ namespace JimazonLite.Web.Areas.Admin.Controllers
             else
             {
                 //update
-                productVM.Product = _unitOfWork.Product.Get(u => u.Id == id);
+                productVM.Product = await _unitOfWork.Product.GetAsync(u => u.Id == id);
                 return View(productVM);
             }
                     
@@ -118,14 +118,14 @@ namespace JimazonLite.Web.Areas.Admin.Controllers
         }
        
         [HttpGet]
-        public IActionResult Delete(int? id)
+        public async Task<IActionResult> Delete(int? id)
         {
             if (id == null || id == 0)
             {
                 return NotFound();
             }
 
-            Product? product = _unitOfWork.Product.Get(u => u.Id == id);
+            Product? product = await _unitOfWork.Product.GetAsync(u => u.Id == id);
 
             if (product == null)
             {
@@ -134,10 +134,10 @@ namespace JimazonLite.Web.Areas.Admin.Controllers
             return View(product);
         }
         [HttpPost, ActionName("Delete")]
-        public IActionResult DeleteProduct(int? id)
+        public async Task<IActionResult> DeleteProduct(int? id)
         {
 
-            Product product = _unitOfWork.Product.Get(u => u.Id == id);
+            Product product = await _unitOfWork.Product.GetAsync(u => u.Id == id);
 
             if (product == null)
             {

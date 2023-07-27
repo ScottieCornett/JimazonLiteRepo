@@ -23,14 +23,14 @@ namespace JimazonLite.Web.Areas.Customer.Controllers
             IEnumerable<Product> products = _unitOfWork.Product.GetAll(includeProperties: "Category");
             return View(products);
         }
-        public IActionResult Details(int id)
+        public async Task<IActionResult> Details(int id)
         {
-            Product product = _unitOfWork.Product.Get(u => u.Id == id, includeProperties: "Category");
+            Product product = await _unitOfWork.Product.GetAsync(u => u.Id == id, includeProperties: "Category");
             return View(product);
         }
-        public IActionResult BuyNow(int id)
+        public async Task<IActionResult> BuyNow(int id)
         {
-            Product product = _unitOfWork.Product.Get(u => u.Id == id, includeProperties: "Category");
+            Product product = await _unitOfWork.Product.GetAsync(u => u.Id == id, includeProperties: "Category");
             return View(product);
         }
 

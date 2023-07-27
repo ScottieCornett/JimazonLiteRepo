@@ -56,14 +56,14 @@ namespace JimazonLite.Web.Areas.Admin.Controllers
            
         }
         [HttpGet]
-        public IActionResult Update(int? id)
+        public async Task<IActionResult> Update(int? id)
         {
             if (id == null || id == 0)
             {
                 return NotFound();
             }
 
-            Category category = _unitOfWork.Category.Get(u => u.Id == id);
+            Category category = await _unitOfWork.Category.GetAsync(u => u.Id == id);
 
             if (category == null)
             {

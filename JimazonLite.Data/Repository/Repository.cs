@@ -25,7 +25,7 @@ namespace JimazonLite.Data.Repository
             dbSet.Add(entity);
         }
 
-        public T Get(Expression<Func<T, bool>> filter, string? includeProperties = null)
+        public async Task<T> GetAsync(Expression<Func<T, bool>> filter, string? includeProperties = null)
         {
             IQueryable<T> query = dbSet;
             query = query.Where(filter);
@@ -38,7 +38,7 @@ namespace JimazonLite.Data.Repository
                 }
             }
 
-            return query.FirstOrDefault();
+            return await query.FirstOrDefaultAsync();
         }
 
         public IEnumerable<T> GetAll(string? includeProperties = null)
