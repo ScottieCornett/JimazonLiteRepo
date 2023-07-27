@@ -13,11 +13,7 @@ var configuration = builder.Configuration;
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
 options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
-//builder.Services.AddAuthentication().AddGoogle(options =>
-//{
-//    options.ClientId = configuration["Authentication:Google:ClientId"];
-//    options.ClientSecret = configuration["Authentication:Google:ClientSecret"];
-//});
+
 builder.Services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
 builder.Services.ConfigureApplicationCookie(options =>
 {

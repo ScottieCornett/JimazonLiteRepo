@@ -18,14 +18,12 @@ namespace JimazonLite.Data
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> db) : base(db)
         {
-            //var folder = Environment.SpecialFolder.LocalApplicationData;
-            //var path = Environment.GetFolderPath(folder);
-            //DbPath = System.IO.Path.Join(path, "JimazonLite.db");
+         
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            //optionsBuilder.UseSqlite($"Data Source={DbPath}");
+           
             optionsBuilder.UseSqlite(@"Data Source=C:\Users\Scottie\source\repos\JimazonLite\DbStorage\JimazonLite.db");
         }
 
