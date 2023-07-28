@@ -4,3 +4,5 @@ My keystone project for Code Louisville Software Development 2 is a mock e-comme
   * Adding comments to the category controller/product controller/ product repository by showing how my project implements SOLID programming principles
   * Making applicable methods in program asynchronous
 My project uses Microsoft EntityFrameworkCore and SQLite as the data store. For the UI, I have elected to use Razor pages. Lastly, I used a repository pattern with this application to decouple higher level modules from lower ones as much as possible.
+
+Note: To access the product and category management pages, you must register an account as an admin. Simply select "Admin" as your role when registering. Also, to access the data, you will need to change the file path in the ApplicationDbContext file to match your machine. The database is "JimazonLite.db" and it is inside the DbStorage folder. Feel free to message me with any other questions!
